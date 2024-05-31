@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cufje1do4g5wr"]
+
+[ext_resource type="PackedScene" uid="uid://bfdbusec53g0g" path="res://Scenes/player.tscn" id="1_6pmk5"]
+[ext_resource type="Script" path="res://Scenes/player.gd" id="2_dffkt"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -158.0
+offset_top = -98.0
+offset_right = 157.0
+offset_bottom = 97.0
+color = Color(0, 0, 0, 1)
+
+[node name="player" parent="." instance=ExtResource("1_6pmk5")]
+position = Vector2(98, 61)
+script = ExtResource("2_dffkt")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)

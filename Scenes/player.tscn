@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfdbusec53g0g"]
+
+[ext_resource type="Texture2D" uid="uid://b6tcb5eas1v20" path="res://Assets/asteroids.png" id="1_e0iwr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yo6s0"]
+size = Vector2(26, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y88ye"]
+atlas = ExtResource("1_e0iwr")
+region = Rect2(106, 130, 36, 28)
+
+[node name="player" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yo6s0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_y88ye")
